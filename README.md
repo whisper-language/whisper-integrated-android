@@ -28,3 +28,14 @@ app 增加依赖
 ```
 implementation 'net.crtrpt:whisper:1.0-SNAPSHOT'
 ```
+
+测试
+
+```
+TLLexer lexer = new TLLexer(CharStreams.fromString("println('hello whisper');"));
+TLParser parser = new TLParser(new CommonTokenStream(lexer));
+ParseTree tree =parser.parse();
+HashMap<String, Function> functions=new HashMap<>();
+EvalVisitor visitor = new EvalVisitor(new Scope(),functions);
+TLValue v= visitor.visit(tree);
+```
