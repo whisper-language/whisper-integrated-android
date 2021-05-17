@@ -26,7 +26,7 @@ allprojects {
 app 增加依赖
 
 ```
-implementation 'net.crtrpt:whisper:1.0-SNAPSHOT'
+implementation 'net.crtrpt:whisper:0.0.1-SNAPSHOT'
 ```
 
 测试
